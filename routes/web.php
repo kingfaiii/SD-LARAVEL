@@ -20,3 +20,4 @@ Auth::routes();
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/mylines',[App\Http\Controllers\MylineController::class, 'list'])->name('myline');
