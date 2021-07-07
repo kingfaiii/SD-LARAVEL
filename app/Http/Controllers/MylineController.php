@@ -10,11 +10,14 @@ class MylineController extends Controller
     //
    public function list()
     {
-      $request = Http::withToken('eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5M2I3YTVhZi03NzZhLTQwYzktODRhNC0yODZjN2Q5OTZmYWEiLCJqdGkiOiI4ODM4OWRlM2Q2N2Q1YjJjYmY2YTcwZmMyZTU5NGFiOWVkNmMzZWIyOGUwNDk1MDNiNTZkNmY4NjY3ZWJjODQwMThjYzVlYjBiNDc4OGQyOCIsImlhdCI6MTYyNDUwMjQ4MCwibmJmIjoxNjI0NTAyNDgwLCJleHAiOjE2MjUxMDcyNzksInN1YiI6IjMiLCJzY29wZXMiOltdfQ.NMSMeev_Eu_c3jQw1n8VijnK9wq907eo6mgCn3uJJ1JZuaabn4xRcxkFHo0uSsnhO_3UyIitkN-nGt1OknL-vbxOMntLpe0w9BA7GxB1L8Xddbf8MBg0GAvfa17EAB8VrZq5n_vzn0HBQ5var0cHzdbU6kEMUheguQUPBRuWAuZy1VHX-B6aXWOmWRFvZ2gRjvkyjNelJqrFQokzWSR1YfV-an6abkPFuyV4uN1bow22ayri8hjQ5cYE_r71IzfXx4mosemAYIOJfvnLip5M9QJBcmaVOBLYrQtJND3HnwJINJM-A8FlGMxERBev2Bu1tS5iEi0GK0udzGi1hkCjb1La1S0QZaJfEeevg0bktHVX8yR-eG0PdD5x_QOwWjJ8CCRxpFcvSijDcP98dcsgx-hSLQhFeYENxZdRd21wcO0Enuwvahiltahc79wm6C06PHdw3L0sWJ_u0wB092eIEWcCLJA5p4TLoto4DSAPoe5hfufPUUaseK-4qWIV1CLm13d_8fpCYGhugmCj2D-GnbcZAUWC-gw91U5XN4OIv3FdAjztApZZrwP6WUODGW8j-zZwcyd3GvtZuRQ8pbVqTThMyHS--Fdw1JF4elHO_yWv1wpVwbQWC-jIpGfcdWUYOvWFBUn7tcnwwmXf_MQ1dWizlqEDgQM-1Ck64pxjHMk')
+      $request = Http::withToken('eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5M2I3YTVhZi03NzZhLTQwYzktODRhNC0yODZjN2Q5OTZmYWEiLCJqdGkiOiI5MjhjNTA0ZWNhNjU5MmZmOTlhODFjZDY1MDE4MTU4OTllMzA3ZTk5MTUyOTA0MDFhZTVmOGZjOGEyMDVkMTkwYWExOThjNDQwMTlkODNiNCIsImlhdCI6MTYyNTEzNzMyOSwibmJmIjoxNjI1MTM3MzI5LCJleHAiOjE2MjU3NDIxMjksInN1YiI6IjUiLCJzY29wZXMiOltdfQ.pl0Upv57096_tcVcReby3v9iiPE27WQzMJtS3hZwXp3ig9GbnDlwMJVz2tl_WBuy7YiDb7PF3pb6XdzkdrAt0PNvvCoKcELCbcxYKwjnmUKoo0ok6pFA3uxtlkYG6q1dzRTySsCGcYNPIcwCY8agiSZlulO60Yn15WJ2o76_CfWzecVYbdhLxhjhxZz-ShTUj4Pfh_7eHNQKiR4SiKsTbjli76Lhc66UIvPzMkOQ6xQcv5VwCVyx3s94X0pAjY7UI3jis_S-CIEGBX7zHpbN5pqSnf_GseGIMd46LwUqiNNL9FojUOYAiR2qjkZ70U-GCfo7Bc92RRo6Z6vOzde4qT3YtW_YhUY7yp1gdTEfdh-ctZNq3pF6tRfjrD5iylUuCDjDoKAsd6fjyF095wil6InMiuTzNpdUJ0aHYQVz-j-Q39TY-4Ry8GR6morBmpxODhQvp2d5HzzK-yyyYMS8P6kWTGwernoKdR15j1tBIZtGJPDtFcjyX1RdQ8s0hHTqjAI08TRwkBfKwO0_ELNnnX4jpfgxwxf26wFdRHHN8CpYywtb773if3qSSzg4zfNUxpaNvSpdbhHog3CEoCozrBMOsOTQGP8CT5ntTR8PVQvr3QbFKu8ZnGG0_OO-pq5Y_jZrE-omVtZMWbe2ahIOk2Ne-P71QNQXUsaM-41IN7g')
         ->acceptJson()
         ->get('http://35.175.135.183/api/sportsdata/current_lines/nfl');
        
-        dd(json_decode($request->getBody()));
+       $datas = json_decode($request->getBody(),true);
+    
+        return view('myline',array("datas"=>$datas));
+           
     }
     
 }

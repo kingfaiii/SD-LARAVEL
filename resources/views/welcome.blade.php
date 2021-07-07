@@ -1,93 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        {{-- Bootstrap 4 --}}
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        {{-- Bootstrap 4 --}}
-        <link rel="stylesheet" href="css/style.css">
-        <title>SD</title>
-    </head>
-    <body class="antialiased" style="background-color:#EDEFF4">
-        {{-- header --}}
-       
-            {{-- header --}}
-                {{-- navbar --}}
-                <div>
-                <nav  id="topbar" class="navbar navbar-dark bg-dark navbar-expand-lg justify-content-between">
-                    <div class="">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                              <a class="nav-link text-light" href="#">HELP <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link text-light" href="#">NEWS</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link text-light" href="#">CONTACTS</a>
-                            </li>
-                          </ul>
-                    </div>             
-                            <div class="form-inline">
-                                @if (Route::has('login'))
-                                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                                        @auth
-                                            <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
-                                        @else
-                                            <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
-                    
-                                            @if (Route::has('register'))
-                                                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                                            @endif
-                                        @endauth
-                                    </div>
-                                @endif
-                   
-                  
-                  </nav>
-                </div>
-                <div >
-                    <nav id="middlebar" class="navbar navbar-light bg-light justify-content-between">
-                        <a class="navbar-brand text-light">LOGO IMAGE</a>
-                        <form class="form-inline">
-                          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
-                      </nav>
-                </div>
-                <div>
-                    <nav id="bottombar" class="navbar navbar-expand-lg navbar-dark bg-dark">
-                      
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                          <ul class="navbar-nav">
-                            <li class="nav-item active">
-                              <a class="nav-link mr-5" href="#">HOME <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link mr-5 href="#">MY LINES</a>
-                              </li>
-                            <li class="nav-item">
-                              <a class="nav-link mr-5 href="#">MY SCORES</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link mr-5" href="#">MY FINALS</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link mr-5" href="#">BILLBOARD STUFF</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </nav>
-                </div>
-                {{-- navbar --}}
-            {{-- banner --}}
+@extends('layouts.app')       
+            
+        @section('content')
+            
                 <div id="banner">
                     <div class="container">
                         <div class="row">
@@ -300,12 +214,14 @@
                                         <div class="row">
                                           <div class="col-md-12">
                                             <h5 class="heading-component-title">BASKETBALL</h5>
+                                            <p style="padding-left:20px;">Last MTG: 06/18/21</p>
                                           </div>
                                         </div>
                                         <div class="row">
                                           <div class="col-md-12">
                                             <div class="sport-table-header">
                                               <p>nba finals</p>
+                                              <p>2-minute HCap | Analyzer | Evaluator</p>
                                             </div>
                                           </div>
                                         </div>
@@ -315,14 +231,16 @@
                                              
                                               <div class="col-md-4">
                                                 <div class="sport-table-title">
-                                                  <div class="sport-table-title-item sport-table-title-item-left"><span class="sport-table-title-team">New York Knicks</span><span class="sport-table-title-team">Houston Rockets</span></div>
-                                                  <div class="sport-table-title-item sport-table-title-item-right"><span class="sport-table-title-score"><span>53</span></span>
-                                                   <span class="sport-table-title-score"><span>66</span></span>
+                                                  <div class="sport-table-title-item sport-table-title-item-left"><span class="sport-table-title-team">BK</span><span class="sport-table-title-team">MIL</span></div>
+                                                  <div class="sport-table-title-item sport-table-title-item-right"><span class="sport-table-title-score"><span>114</span></span>
+                                                   <span class="sport-table-title-score"><span>108</span></span>
                                                   </div>
                                                 </div>
                                               </div>
                                               <div class="col-md-7">
-                                                <div class="sport-table-wager sport-table-wager-double"><a class="sport-table-wager-button" href="#" data-toggle="modal" data-target="#sportModal" data-team-name="New York Knicks" data-confrontation="New York Knicks vs Houston Rockets" data-wager-count="2.05" data-score="53:66"><span>New York Knicks</span><span class="sport-table-wager-button-count">2.05</span></a><a class="sport-table-wager-button" href="#" data-toggle="modal" data-target="#sportModal" data-team-name="Houston Rockets" data-confrontation="New York Knicks vs Houston Rockets" data-wager-count="1.005" data-score="53:66"><span>Houston Rockets</span><span class="sport-table-wager-button-count">1.005</span></a>
+                                                <div class="sport-table-wager sport-table-wager-double">
+                                                  <a class="sport-table-wager-button" href="#" data-toggle="modal" data-target="#sportModal" data-team-name="New York Knicks" data-confrontation="New York Knicks vs Houston Rockets" data-wager-count="2.05" data-score="53:66"><span>Brooklyn</span><span class="sport-table-wager-button-count">2.05</span></a>
+                                                  <a class="sport-table-wager-button" href="#" data-toggle="modal" data-target="#sportModal" data-team-name="Houston Rockets" data-confrontation="New York Knicks vs Houston Rockets" data-wager-count="1.005" data-score="53:66"><span>Milwaukee</span><span class="sport-table-wager-button-count">1.005</span></a>
                                                 </div>
                                               </div>
                                               <div class="col-md-1">
@@ -987,11 +905,12 @@
                                       <div class="row">
                                         <div class="col-md-12">
                                           <h5 class="heading-component-title">BASKETBALL</h5>
+                                          <p style="padding-left:20px;">Last MTG: 06/18/21</p>
                                         </div>
                                       </div>
-                                      <div class="row">
-                                        <div class="col-md-12">
-                                          <div class="sport-table-header">
+                                      <div class="sport-table-header">
+                                        <div class="row">
+                                          <div class="col-md-12">
                                             <p>nba finals</p>
                                           </div>
                                         </div>
@@ -1556,9 +1475,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-           
-            
+            </div> 
             {{-- End of navs and tabs --}}
-    </body>
-</html>
+            @endsection

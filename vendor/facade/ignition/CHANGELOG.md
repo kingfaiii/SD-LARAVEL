@@ -2,10 +2,6 @@
 
 All notable changes to `ignition` will be documented in this file
 
-## 2.10.2 - 2021-06-11
-
-- fix typo in config/flare.php (#395)
-
 ## 2.10.1 - 2021-06-03
 
 - fix memory leaks in Octane (#393)

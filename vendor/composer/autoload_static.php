@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit026fcbe094494dac78ec6b20b4ab6405
+class ComposerStaticInit99c14067b26620ae36597e5a01b23aaa
 {
     public static $files = array (
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
@@ -520,6 +520,7 @@ class ComposerStaticInit026fcbe094494dac78ec6b20b4ab6405
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\MylineController' => __DIR__ . '/../..' . '/app/Http/Controllers/MylineController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -530,6 +531,8 @@ class ComposerStaticInit026fcbe094494dac78ec6b20b4ab6405
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Models\\myline' => __DIR__ . '/../..' . '/app/Models/myline.php',
+        'App\\Models\\myscore' => __DIR__ . '/../..' . '/app/Models/myscore.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -4363,10 +4366,8 @@ class ComposerStaticInit026fcbe094494dac78ec6b20b4ab6405
         'SebastianBergmann\\Timer\\Timer' => __DIR__ . '/..' . '/phpunit/php-timer/src/Timer.php',
         'SebastianBergmann\\Type\\CallableType' => __DIR__ . '/..' . '/sebastian/type/src/CallableType.php',
         'SebastianBergmann\\Type\\Exception' => __DIR__ . '/..' . '/sebastian/type/src/exception/Exception.php',
-        'SebastianBergmann\\Type\\FalseType' => __DIR__ . '/..' . '/sebastian/type/src/FalseType.php',
         'SebastianBergmann\\Type\\GenericObjectType' => __DIR__ . '/..' . '/sebastian/type/src/GenericObjectType.php',
         'SebastianBergmann\\Type\\IterableType' => __DIR__ . '/..' . '/sebastian/type/src/IterableType.php',
-        'SebastianBergmann\\Type\\LogicException' => __DIR__ . '/..' . '/sebastian/type/src/exception/LogicException.php',
         'SebastianBergmann\\Type\\MixedType' => __DIR__ . '/..' . '/sebastian/type/src/MixedType.php',
         'SebastianBergmann\\Type\\NullType' => __DIR__ . '/..' . '/sebastian/type/src/NullType.php',
         'SebastianBergmann\\Type\\ObjectType' => __DIR__ . '/..' . '/sebastian/type/src/ObjectType.php',
@@ -5282,10 +5283,10 @@ class ComposerStaticInit026fcbe094494dac78ec6b20b4ab6405
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit026fcbe094494dac78ec6b20b4ab6405::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit026fcbe094494dac78ec6b20b4ab6405::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit026fcbe094494dac78ec6b20b4ab6405::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit026fcbe094494dac78ec6b20b4ab6405::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit99c14067b26620ae36597e5a01b23aaa::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit99c14067b26620ae36597e5a01b23aaa::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit99c14067b26620ae36597e5a01b23aaa::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit99c14067b26620ae36597e5a01b23aaa::$classMap;
 
         }, null, ClassLoader::class);
     }
