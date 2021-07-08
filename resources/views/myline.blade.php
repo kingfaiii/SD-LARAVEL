@@ -7,39 +7,36 @@
 <?php foreach ($datas["data"]["sports"] as $sportsdata){
         foreach($sportsdata["leagues"] as $leaguesdata){
     ?>
-<div class="row">
-    <div class="col-md-12">
+
         <h5 class="heading-component-title text-uppercase mt-5"><?php echo $sportsdata["sport_name"]; ?></h5>
-    </div>
-</div>
-<div class="sport-table-header justify-content-between">
-    <div class="row">
-        <div class="col-md-5">
-            <p><?php echo $leaguesdata["league_name"]; ?></p>
-        </div>
-        <div class="col-md-7">
+
+   
            <?php foreach($leaguesdata["groups"] as $groupsdata){
             foreach($groupsdata["events"] as $eventsdata){
-            
              ?>
              <?php 
             try {
                 if ($eventsdata["event_date"]!="") {
-                   
+                  
             ?>
-              <p class="text-uppercase"> Date: <?php echo $eventsdata["event_date"]; ?></p>
-         
+            <div class="sport-table-header justify-content-between">
+             <div class="row">
+                <div class="col-md-5">
+                    <p><?php echo $leaguesdata["league_name"]; ?></p>
+                </div>
+                 <div class="col-md-7">
+                    <p class="text-uppercase"> Date: <?php echo $eventsdata["event_date"]; ?></p>
+                </div>
+            </div>
+           </div>
               <?php
               }
             } catch (\Throwable $th) {
                 //throw $th;
             }
         
-        }}   ?>  
+          ?>  
            
-        </div>
-    </div>
-</div>
 <div class="sport-table">
     <div class="sport-table-tr">
       <div class="sport-row align-items-center">                           
@@ -89,9 +86,9 @@
       </div>
     </div>
   </div>
-<?php } } ?>
+<?php } }}}  ?>
 <?php 
-   //dd($sportsdata);
+   //dd($datas);
   ?>
     
 
