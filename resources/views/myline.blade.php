@@ -3,7 +3,6 @@
 @section('content')
     
 {{-- My Current Lines Data --}}
-<h1 class="mt-5 ml-2">MY LINES</h1>
 <?php foreach ($datas["data"]["sports"] as $sportsdata){
         foreach($sportsdata["leagues"] as $leaguesdata){
     ?>
@@ -40,7 +39,7 @@
 <div class="sport-table">
     <div class="sport-table-tr">
       <div class="sport-row align-items-center">                           
-          <div class="container">
+          <div class="">
             <div class="row">
               <div class="col-md-4">
                 <div class="sport-table-title">

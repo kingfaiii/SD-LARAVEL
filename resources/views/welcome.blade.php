@@ -1476,5 +1476,6 @@
                     </div>
                 </div>
             </div> 
+            <?php //dd($datas) ?>
             {{-- End of navs and tabs --}}
             @endsection

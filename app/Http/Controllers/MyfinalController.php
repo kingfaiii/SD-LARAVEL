@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
-class MyscoreController extends Controller
+class MyfinalController extends Controller
 {
     //
     public function list()
@@ -20,7 +20,7 @@ class MyscoreController extends Controller
        $leagues = json_decode($requests->getBody(),true);
        //dd($leagues);
        $datas = json_decode($request->getBody(),true);
-        return view('myscore',array("datas"=>$datas),array("leagues"=>$leagues));
+        return view('myfinal',array("datas"=>$datas),array("leagues"=>$leagues));
            
 }
 }

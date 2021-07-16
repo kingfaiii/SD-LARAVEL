@@ -1,8 +1,10 @@
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -46,7 +48,7 @@
                                 @if (Route::has('login'))
                                     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                                         @auth
-                                            <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                                            <a href="{{ route('welcome') }}" class="text-sm text-gray-700 underline">Home</a>
                                         @else
                                             <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
                     
@@ -77,20 +79,17 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
                           <ul class="navbar-nav">
-                            <li class="nav-item active">
-                              <a class="nav-link mr-5" href="./">HOME <span class="sr-only">(current)</span></a>
+                            <li class="nav-item">
+                              <a class="nav-link mr-5" href="{{ Route('welcome') }}">HOME <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link mr-5" href="{{ Route('myline') }}">MY LINES</a>
                               </li>
                             <li class="nav-item">
-                              <a class="nav-link mr-5" href="./myscores">MY SCORES</a>
+                              <a class="nav-link mr-5" href="{{ Route('myscore') }}">MY SCORES</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link mr-5" href="./myfinals">MY FINALS</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link mr-5" href="./billboardscore">BILLBOARD STUFF</a>
+                              <a class="nav-link mr-5" href="{{  Route('myfinal') }}">MY FINALS</a>
                             </li>
                           </ul>
                         </div>
